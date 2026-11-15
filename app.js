@@ -52,9 +52,9 @@
       facts.appendChild(row);
     }
     if (typeof item.rating === 'number') {
-      var r = item.rating.toFixed(1);
+      var r = String(item.rating) + '점';
       if (typeof item.reviews === 'number') r += ' (리뷰 ' + item.reviews.toLocaleString('ko-KR') + '개)';
-      fact('평점', r);
+      fact('별점', r);
     }
     fact('배송 예정', item.shipping || '쿠팡에서 확인');
     body.appendChild(facts);
